@@ -1,23 +1,20 @@
-export default function Sidebar() {
+export default function Header({ onCreateTask }) {
  return (
- <aside className="sidebar">
- <div className="brand">
- <div className="brandMark">T</div>
+ <header className="topbar">
  <div>
- <strong>TaskFlow</strong>
- <span>PracticalWork1</span>
+ <p className="eyebrow">Учебный проект</p>
+ <h1>Добро пожаловать в TaskFlow</h1>
+ <p className="subtitle">
+ Управляйте задачами, фильтрами и прогрессом.
+ </p>
  </div>
- </div>
- <nav className="menu" aria-label="Основная навигация">
- <button className="menuItem active" type="button">Обзор</button>
- <button className="menuItem" type="button">Мои задачи</button>
- <button className="menuItem" type="button">Доска</button>
- <button className="menuItem" type="button">Проекты</button>
- </nav>
- <div className="sidebarNote">
- <strong>Практика 1</strong>
- <span>Статический интерфейс на React</span>
- </div>
- </aside>
+ <button
+ className="primaryButton"
+ type="button"
+ onClick={onCreateTask}
+ >
+ + Новая задача
+ </button>
+ </header>
  );
 }
